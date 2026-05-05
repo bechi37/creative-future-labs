@@ -257,7 +257,7 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
   100%{transform:translateY(-60vh) translateX(20px);opacity:0}
 }
 
-.hero h1{max-width:16ch}
+.hero h1{max-width:none}
 .hero h1 .accent{color:var(--accent);font-style:italic;font-weight:400;font-family:var(--display)}
 .hero .lede{margin-top:28px;max-width:48ch;font-size:clamp(16px,1.45vw,20px)}
 .hero .ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
@@ -575,6 +575,7 @@ html.theme-light .theme-toggle .ico-sun{display:block}
   .portfolio{grid-template-columns:1fr}
   .foot-main{grid-template-columns:1fr}
   .hero{padding-top:100px}
+  .hero-headline-split{grid-template-columns:1fr !important}
 }
 </style>
 </head>
@@ -626,19 +627,20 @@ html.theme-light .theme-toggle .ico-sun{display:block}
   <div class="hero-particles" id="particles"></div>
 
   <div class="wrap">
-    <span class="eyebrow reveal">
-      <span lang="en">Creative Future Labs · Est. 2024</span>
-      <span lang="bg">Creative Future Labs · Основано 2024</span>
-    </span>
-
-    <h1 class="reveal" style="margin-top:24px">
-      <span lang="en">We design your <span class="accent">brand.</span><br>We automate your business.</span>
-      <span lang="bg">Проектираме вашия <span class="accent">бранд.</span><br>Автоматизираме вашия бизнес.</span>
-    </h1>
+    <div class="reveal hero-headline-split" style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:start">
+      <h1 style="max-width:none">
+        <span lang="en">We design your <span class="accent">brand.</span></span>
+        <span lang="bg">Проектираме вашия <span class="accent">бранд.</span></span>
+      </h1>
+      <h1 style="max-width:none">
+        <span lang="en">We automate your business.</span>
+        <span lang="bg">Автоматизираме вашия бизнес.</span>
+      </h1>
+    </div>
 
     <p class="lede reveal">
-      <span lang="en">Visual identity, product films, and AI systems — built together, shipped fast.</span>
-      <span lang="bg">Визуална идентичност, продуктови видеа и AI системи — изградени заедно, доставени бързо.</span>
+      <span lang="en">Visual identity, product videos, and AI systems — built together, or separately, shipped fast.</span>
+      <span lang="bg">Визуална идентичност, продуктови видеа и AI системи — изградени заедно или поотделно, доставени бързо.</span>
     </p>
 
     <div class="ctas reveal">
@@ -666,19 +668,15 @@ html.theme-light .theme-toggle .ico-sun{display:block}
     <div class="section-head">
       <div class="reveal">
         <span class="eyebrow"><span lang="en">01 — Services</span><span lang="bg">01 — Услуги</span></span>
-        <h2 style="margin-top:18px">
-          <span lang="en">Style. Automation.<br>That's it.</span>
-          <span lang="bg">Стил. Автоматизация.<br>Само това.</span>
+        <h2 style="margin-top:18px;font-size:clamp(48px,6.5vw,96px)">
+          <span lang="en">Style. Automation.</span>
+          <span lang="bg">Стил. Автоматизация.</span>
         </h2>
       </div>
     </div>
 
     <!-- Brand & Style -->
     <div class="services-group reveal">
-      <div class="group-label">
-        <strong lang="en">Brand &amp; Style</strong>
-        <strong lang="bg">Бранд и Стил</strong>
-      </div>
       <div class="services">
         <article class="card">
           <span class="num">01</span>
@@ -735,10 +733,6 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 
     <!-- Automation -->
     <div class="services-group reveal" style="margin-top:52px">
-      <div class="group-label">
-        <strong lang="en">Automation</strong>
-        <strong lang="bg">Автоматизации</strong>
-      </div>
       <div class="services services-2">
         <article class="card">
           <span class="num">04</span>
@@ -781,21 +775,19 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 <!-- ============ FIRST TIME FREE ============ -->
 <section id="free">
   <div class="wrap">
-    <div class="free-inner">
-      <div class="reveal">
-        <div class="free-badge">
-          <span lang="en">★ First Time Free</span>
-          <span lang="bg">★ Първи проект безплатно</span>
-        </div>
-        <h2>
-          <span lang="en">We build your full project — for <em>free.</em></span>
-          <span lang="bg">Изграждаме целия ви проект — <em>безплатно.</em></span>
-        </h2>
+    <div class="reveal">
+      <div class="free-badge">
+        <span lang="en">★ First Time Free</span>
+        <span lang="bg">★ Първи проект безплатно</span>
       </div>
-      <div class="free-right reveal">
+      <div class="free-right" style="max-width:64ch;margin-top:0">
         <p>
           <span lang="en">Despite our rich <a href="#work" style="color:var(--accent);border-bottom:1px solid var(--accent-soft)">portfolio</a>, we want to prove what we can do. We're looking for our first clients and will deliver a complete project for free — Design + Video + AI Automation.</span>
           <span lang="bg">Въпреки богатото си <a href="#work" style="color:var(--accent);border-bottom:1px solid var(--accent-soft)">портфолио</a>, искаме да докажем какво можем. Търсим първите си клиенти, за които ще изработим ПЪЛЕН ПРОЕКТ БЕЗПЛАТНО — Дизайн + Видео + AI Автоматизация.</span>
+        </p>
+        <p style="font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-mute);margin-top:8px">
+          <span lang="en">All we want in return is:</span>
+          <span lang="bg">Всичко, което искаме в замяна:</span>
         </p>
         <div style="display:flex;flex-direction:column;gap:10px">
           <div class="free-condition">
@@ -822,10 +814,10 @@ html.theme-light .theme-toggle .ico-sun{display:block}
   <div class="wrap">
     <div class="section-head">
       <div class="reveal">
-        <span class="eyebrow"><span lang="en">02 — Selected work</span><span lang="bg">02 — Избрани проекти</span></span>
+        <span class="eyebrow"><span lang="en">Portfolio</span><span lang="bg">Портфолио</span></span>
         <h2 style="margin-top:18px">
-          <span lang="en">A taste of what we build.</span>
-          <span lang="bg">Поглед към това, което правим.</span>
+          <span lang="en">A taste of what we've built.</span>
+          <span lang="bg">Поглед към това, което сме направили.</span>
         </h2>
       </div>
     </div>

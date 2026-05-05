@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Creative Future Labs — Visuals · Innovation · AI Automation</title>
+<title>Creative Future Labs — Brand Design & AI Automation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -39,7 +39,6 @@
   --mono:'JetBrains Mono', ui-monospace, monospace;
 }
 
-/* Light "paper" theme — matches the logo's cream background + charcoal wordmark */
 html.theme-light{
   --bg:#EAE7E0;
   --bg-1:#E2DED6;
@@ -258,16 +257,10 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
   100%{transform:translateY(-60vh) translateX(20px);opacity:0}
 }
 
-.hero h1{max-width:14ch}
+.hero h1{max-width:16ch}
 .hero h1 .accent{color:var(--accent);font-style:italic;font-weight:400;font-family:var(--display)}
-.hero .lede{margin-top:28px;max-width:54ch;font-size:clamp(16px,1.45vw,20px)}
+.hero .lede{margin-top:28px;max-width:48ch;font-size:clamp(16px,1.45vw,20px)}
 .hero .ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-.hero .meta{
-  margin-top:64px;display:flex;gap:32px;flex-wrap:wrap;
-  font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-mute);
-}
-.hero .meta span{display:inline-flex;align-items:center;gap:8px}
-.hero .meta .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent-glow)}
 
 /* Marquee */
 .marquee{
@@ -292,32 +285,6 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
 @keyframes scroll{
   from{transform:translateX(0)}
   to{transform:translateX(-50%)}
-}
-
-/* ---------- About ---------- */
-.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(40px,8vw,120px);align-items:end}
-.about-grid h2{max-width:14ch}
-.about-grid h2 em{font-style:italic;font-weight:400;color:var(--accent)}
-.about-right p + p{margin-top:18px}
-
-.stats{
-  margin-top:96px;
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--line);
-}
-.stat{padding:36px 28px 8px;border-right:1px solid var(--line);position:relative}
-.stat:last-child{border-right:0}
-.stat .num{
-  font-family:var(--display);font-weight:500;
-  font-size:clamp(48px,7vw,96px);
-  letter-spacing:-0.04em;
-  line-height:0.95;
-  display:flex;align-items:baseline;gap:6px;
-}
-.stat .num .suffix{font-size:0.45em;color:var(--accent);font-weight:400}
-.stat .label{
-  margin-top:12px;
-  font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-mute);
 }
 
 /* ---------- Services ---------- */
@@ -368,57 +335,33 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
   padding:6px 10px;border:1px solid var(--line-2);border-radius:999px;
 }
 
-/* ---------- Why Us ---------- */
-.why{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.why-item{
-  padding:48px 40px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  position:relative;
-  transition:background .35s ease;
+/* ---------- Service groups ---------- */
+.services-group{margin-bottom:0}
+.group-label{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--fg-mute);margin-bottom:28px;display:flex;align-items:center;gap:12px;
 }
-.why-item:hover{background:var(--bg-1)}
-.why-item .ico{color:var(--accent);margin-bottom:24px}
-.why-item h3{font-size:clamp(20px,1.7vw,24px);margin-bottom:10px}
-.why-item p{font-size:14.5px;max-width:42ch}
-.why-item .idx{
-  position:absolute;top:20px;right:24px;
-  font-family:var(--mono);font-size:11px;color:var(--fg-mute);letter-spacing:0.1em;
-}
+.group-label::before{content:"";width:32px;height:1px;background:var(--line-2)}
+.group-label strong{color:var(--fg-dim)}
+.services-2{grid-template-columns:1fr 1fr}
 
-/* ---------- Process ---------- */
-.process{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
-  position:relative;
+/* ---------- First Time Free ---------- */
+.free-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,100px);align-items:center}
+.free-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;
+  font-family:var(--display);font-weight:600;font-size:13px;
+  letter-spacing:0.05em;text-transform:uppercase;
+  padding:7px 16px;border-radius:999px;margin-bottom:24px;
 }
-.process::before{
-  content:"";
-  position:absolute;
-  top:34px;left:5%;right:5%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--line-2) 8%,var(--line-2) 92%,transparent);
-  z-index:0;
+.free-inner h2{max-width:16ch}
+.free-inner h2 em{font-style:italic;font-weight:400;color:var(--accent)}
+.free-right{display:flex;flex-direction:column;gap:20px}
+.free-condition{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:14.5px;color:var(--fg-dim);line-height:1.5;
 }
-.step{position:relative;z-index:1}
-.step .dot{
-  width:68px;height:68px;border-radius:50%;
-  background:var(--bg);
-  border:1px solid var(--line-2);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--display);font-size:22px;font-weight:500;
-  color:var(--fg);
-  transition:border-color .3s ease, color .3s ease, background .3s ease;
-}
-.step:hover .dot{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-.step h4{
-  font-family:var(--display);font-weight:500;
-  font-size:18px;margin:24px 0 8px;
-  letter-spacing:-0.01em;
-}
-.step p{font-size:14px;color:var(--fg-dim);max-width:24ch}
-.step .label-mono{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-mute);
-  margin-bottom:6px;display:block;
-}
+.free-condition::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0}
 
 /* ---------- Portfolio ---------- */
 .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -456,7 +399,7 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
   pointer-events:none;
 }
 
-/* A · Halo Studio — orb + concentric rings */
+/* A · Halo Studio */
 .v-halo{
   background:
     radial-gradient(120% 70% at 50% 110%, color-mix(in oklab, var(--accent), transparent 70%) 0%, transparent 60%),
@@ -475,7 +418,7 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
 .v-halo .ticks{position:absolute;inset:0}
 .v-halo .ticks span{position:absolute;left:50%;top:48%;width:1px;height:7px;background:var(--fg-mute);transform-origin:50% 0;}
 
-/* B · Northwind — generative spectrum frames */
+/* B · Northwind */
 .v-north{
   background:var(--bg-1);
   display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);
@@ -493,14 +436,14 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
   font-family:var(--mono);font-size:7.5px;letter-spacing:0.12em;color:rgba(255,255,255,0.85);text-transform:uppercase;
 }
 
-/* C · Atlas OS — automation flow diagram */
+/* C · Atlas OS */
 .v-atlas{
   background:radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--accent), transparent 88%) 0%, transparent 70%), var(--bg-1);
   padding:24px;
 }
 .v-atlas svg{width:100%;height:100%;display:block}
 
-/* D · Form Factor — type-driven monogram */
+/* D · Form Factor */
 .v-form{
   background:linear-gradient(160deg, var(--bg-2) 0%, var(--bg-1) 100%);
   display:flex;align-items:center;justify-content:center;
@@ -517,7 +460,7 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
 .v-form .corner.bl{bottom:60px;left:20px}
 .v-form .badge{left:auto !important;right:16px;top:46px}
 
-/* E · Volta Films — film strip + timecode */
+/* E · Volta Films */
 .v-volta{
   background:#0a0a0d;
   display:flex;flex-direction:column;justify-content:center;gap:8px;padding:0 0 78px;
@@ -540,7 +483,7 @@ html.theme-light .v-volta{background:#1a1a1f}
 .v-volta .rec{position:absolute;top:32px;right:20px;display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:#ff5252;z-index:3}
 .v-volta .rec::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff5252;animation:pulse 1.2s ease-in-out infinite}
 
-/* F · Signal Loop — terminal/code */
+/* F · Signal Loop */
 .v-signal{
   background:#0a0a0d;
   padding:50px 22px 78px;
@@ -560,50 +503,6 @@ html.theme-light .v-signal{background:#15151a}
 .v-signal .cur{display:inline-block;width:6px;height:11px;background:var(--accent);vertical-align:-1px;animation:blink 1s steps(2) infinite;margin-left:2px}
 @keyframes blink{50%{opacity:0}}
 
-/* Link-arrow + CTA card */
-.link-arrow{
-  display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--display);font-weight:500;font-size:15px;
-  color:var(--fg);
-  border-bottom:1px solid var(--line-2);padding-bottom:6px;
-  transition:color .2s ease, border-color .2s ease, gap .25s ease;
-  align-self:flex-start;
-}
-.link-arrow:hover{color:var(--accent);border-color:var(--accent);gap:14px}
-.link-arrow .arrow{font-family:var(--mono);font-size:14px}
-
-.cta-card{
-  margin-top:48px;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:
-    radial-gradient(80% 100% at 100% 0%, color-mix(in oklab, var(--accent), transparent 86%) 0%, transparent 60%),
-    var(--bg-1);
-  padding:clamp(36px,5vw,64px);
-  display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end;
-  position:relative;overflow:hidden;
-}
-.cta-card::before{
-  content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;
-  background:radial-gradient(circle, color-mix(in oklab, var(--accent), transparent 60%), transparent 70%);
-  filter:blur(40px);pointer-events:none;
-}
-.cta-card h2{max-width:14ch;position:relative;z-index:1}
-.cta-card h2 em{font-style:italic;font-weight:400;color:var(--accent)}
-.cta-card .right{display:flex;flex-direction:column;gap:20px;position:relative;z-index:1}
-.cta-card .right p{font-size:15px;line-height:1.6}
-.cta-card .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.cta-card .meta-line{
-  display:flex;gap:24px;flex-wrap:wrap;
-  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-mute);
-  padding-top:18px;border-top:1px solid var(--line);
-}
-.cta-card .meta-line a{color:var(--fg);border-bottom:1px solid var(--line-2);padding-bottom:2px;transition:color .2s ease, border-color .2s ease}
-.cta-card .meta-line a:hover{color:var(--accent);border-color:var(--accent)}
-@media (max-width:900px){
-  .cta-card{grid-template-columns:1fr;gap:28px}
-}
-
 .proj-note{
   margin-top:32px;
   font-family:var(--mono);font-size:12px;letter-spacing:0.08em;color:var(--fg-mute);
@@ -611,42 +510,6 @@ html.theme-light .v-signal{background:#15151a}
 }
 .proj-note::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px var(--accent-glow);animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{50%{opacity:0.4}}
-
-/* ---------- Contact ---------- */
-.contact-inner{
-  display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,8vw,100px);align-items:start;
-}
-.contact h2{max-width:14ch}
-.contact h2 em{font-style:italic;font-weight:400;color:var(--accent)}
-.contact-details{margin-top:48px;display:flex;flex-direction:column;gap:24px}
-.detail{display:flex;flex-direction:column;gap:4px}
-.detail .k{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-mute)}
-.detail .v{font-family:var(--display);font-size:20px;font-weight:500;letter-spacing:-0.01em}
-.detail .v:hover{color:var(--accent)}
-
-form{display:flex;flex-direction:column;gap:18px}
-.field{display:flex;flex-direction:column;gap:8px}
-.field label{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-mute)}
-.field input,.field textarea{
-  background:transparent;
-  border:0;
-  border-bottom:1px solid var(--line-2);
-  color:var(--fg);
-  padding:10px 0 12px;
-  font-family:var(--body);font-size:16px;
-  outline:none;
-  transition:border-color .25s ease;
-  resize:none;
-}
-.field input:focus,.field textarea:focus{border-bottom-color:var(--accent)}
-.field textarea{min-height:110px;line-height:1.5}
-form .btn{align-self:flex-start;margin-top:10px}
-.form-success{
-  margin-top:18px;
-  font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:var(--accent);
-  display:none;
-}
-.form-success.on{display:block}
 
 /* ---------- Footer ---------- */
 footer{padding:0;border-top:1px solid var(--line)}
@@ -680,7 +543,7 @@ footer{padding:0;border-top:1px solid var(--line)}
 .reveal-stagger.in > *:nth-child(3){transition-delay:.16s}
 .reveal-stagger.in > *:nth-child(4){transition-delay:.24s}
 
-/* ---------- Theme toggle button ---------- */
+/* ---------- Theme toggle ---------- */
 .theme-toggle{
   width:34px;height:34px;
   display:inline-flex;align-items:center;justify-content:center;
@@ -700,25 +563,18 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 @media (max-width:1000px){
   .nav .links{display:none}
   .burger{display:flex}
-  .about-grid{grid-template-columns:1fr;gap:32px}
-  .stats{grid-template-columns:1fr;}
-  .stat{border-right:0;border-bottom:1px solid var(--line)}
   .services{grid-template-columns:1fr 1fr}
-  .why{grid-template-columns:1fr}
-  .process{grid-template-columns:1fr 1fr;gap:36px 20px}
-  .process::before{display:none}
+  .services-2{grid-template-columns:1fr 1fr}
   .portfolio{grid-template-columns:1fr 1fr}
-  .contact-inner{grid-template-columns:1fr}
+  .free-inner{grid-template-columns:1fr}
   .foot-main{grid-template-columns:1fr 1fr}
 }
 @media (max-width:640px){
   .services{grid-template-columns:1fr}
+  .services-2{grid-template-columns:1fr}
   .portfolio{grid-template-columns:1fr}
-  .process{grid-template-columns:1fr}
   .foot-main{grid-template-columns:1fr}
   .hero{padding-top:100px}
-  .hero .meta{gap:16px;margin-top:48px}
-  .stat{padding:28px 0 8px}
 }
 </style>
 </head>
@@ -731,9 +587,8 @@ html.theme-light .theme-toggle .ico-sun{display:block}
       <img src="assets/logo-dark.png" alt="Creative Future Labs" />
     </a>
     <nav class="links" aria-label="Primary">
-      <a href="about.html"><span lang="en">About</span><span lang="bg">За нас</span></a>
       <a href="#services"><span lang="en">Services</span><span lang="bg">Услуги</span></a>
-      <a href="#process"><span lang="en">Process</span><span lang="bg">Процес</span></a>
+      <a href="#free"><span lang="en">Free Project</span><span lang="bg">Безплатен проект</span></a>
       <a href="#work"><span lang="en">Work</span><span lang="bg">Проекти</span></a>
       <a href="contact.html"><span lang="en">Contact</span><span lang="bg">Контакт</span></a>
     </nav>
@@ -746,8 +601,8 @@ html.theme-light .theme-toggle .ico-sun{display:block}
         <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
-      <a href="contact.html" class="btn btn-primary btn-sm">
-        <span lang="en">Start a project</span><span lang="bg">Започни проект</span>
+      <a href="#free" class="btn btn-primary btn-sm">
+        <span lang="en">Free project</span><span lang="bg">Безплатен проект</span>
         <span class="arrow">→</span>
       </a>
       <button class="burger" id="burger" aria-label="Menu"><span></span></button>
@@ -756,13 +611,12 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" data-close><span lang="en">About</span><span lang="bg">За нас</span></a>
   <a href="#services" data-close><span lang="en">Services</span><span lang="bg">Услуги</span></a>
-  <a href="#process" data-close><span lang="en">Process</span><span lang="bg">Процес</span></a>
+  <a href="#free" data-close><span lang="en">Free Project</span><span lang="bg">Безплатен проект</span></a>
   <a href="#work" data-close><span lang="en">Work</span><span lang="bg">Проекти</span></a>
   <a href="contact.html" data-close><span lang="en">Contact</span><span lang="bg">Контакт</span></a>
-  <a href="contact.html" class="btn btn-primary" data-close>
-    <span lang="en">Start a project</span><span lang="bg">Започни проект</span>
+  <a href="#free" class="btn btn-primary" data-close>
+    <span lang="en">Get free project</span><span lang="bg">Безплатен проект</span>
     <span class="arrow">→</span>
   </a>
 </div>
@@ -782,82 +636,30 @@ html.theme-light .theme-toggle .ico-sun{display:block}
     </span>
 
     <h1 class="reveal" style="margin-top:24px">
-      <span lang="en">Where craft meets <span class="accent">machine&nbsp;intelligence.</span></span>
-      <span lang="bg">Където занаятът среща <span class="accent">машинния&nbsp;интелект.</span></span>
+      <span lang="en">We design your <span class="accent">brand.</span><br>We automate your business.</span>
+      <span lang="bg">Проектираме вашия <span class="accent">бранд.</span><br>Автоматизираме вашия бизнес.</span>
     </h1>
 
     <p class="lede reveal">
-      <span lang="en">A hybrid creative studio building visuals, films, and AI-driven systems for brands ready to move at the speed of what's next. Premium output. Engineered workflows. No filler.</span>
-      <span lang="bg">Хибридно креативно студио, което създава визии, филми и AI системи за марки, готови да се движат със скоростта на бъдещето. Премиум резултат. Прецизна работа. Без излишно.</span>
+      <span lang="en">Visual identity, product films, and AI systems — built together, shipped fast.</span>
+      <span lang="bg">Визуална идентичност, продуктови видеа и AI системи — изградени заедно, доставени бързо.</span>
     </p>
 
     <div class="ctas reveal">
-      <a href="contact.html" class="btn btn-primary">
-        <span lang="en">Start a project</span><span lang="bg">Започни проект</span>
+      <a href="#free" class="btn btn-primary">
+        <span lang="en">Get a free project</span><span lang="bg">Вземи безплатен проект</span>
         <span class="arrow">→</span>
       </a>
       <a href="#services" class="btn btn-ghost">
-        <span lang="en">Explore services</span><span lang="bg">Виж услугите</span>
+        <span lang="en">See services</span><span lang="bg">Виж услугите</span>
       </a>
-    </div>
-
-    <div class="meta reveal">
-      <span><span class="dot"></span><span lang="en">Available · Q3 2026</span><span lang="bg">Свободни · Q3 2026</span></span>
-      <span><span lang="en">Sofia · Remote worldwide</span><span lang="bg">София · Дистанционно по цял свят</span></span>
-      <span><span lang="en">EN / БГ</span><span lang="bg">EN / БГ</span></span>
     </div>
   </div>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>3D Visualization<span class="sep">◆</span>Product Renders<span class="sep">◆</span>AI Video<span class="sep">◆</span>Motion Design<span class="sep">◆</span>Claude Integrations<span class="sep">◆</span>Workflow Automation<span class="sep">◆</span>Brand Films<span class="sep">◆</span>Generative Systems<span class="sep">◆</span></span>
-      <span>3D Visualization<span class="sep">◆</span>Product Renders<span class="sep">◆</span>AI Video<span class="sep">◆</span>Motion Design<span class="sep">◆</span>Claude Integrations<span class="sep">◆</span>Workflow Automation<span class="sep">◆</span>Brand Films<span class="sep">◆</span>Generative Systems<span class="sep">◆</span></span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section id="about">
-  <div class="wrap">
-    <span class="eyebrow reveal">
-      <span lang="en">01 — Mission</span><span lang="bg">01 — Мисия</span>
-    </span>
-    <div class="about-grid" style="margin-top:36px">
-      <div class="reveal">
-        <h2>
-          <span lang="en">We design what's <em>next</em>, then build it twice as fast.</span>
-          <span lang="bg">Проектираме <em>бъдещето</em> — и го изграждаме двойно по-бързо.</span>
-        </h2>
-      </div>
-      <div class="about-right reveal">
-        <p>
-          <span lang="en">Creative Future Labs is a small, senior team of designers, filmmakers, and AI engineers. We pair a craft-first eye with the leverage of generative tools to ship work that feels considered, never automated.</span>
-          <span lang="bg">Creative Future Labs е малък, опитен екип от дизайнери, режисьори и AI инженери. Съчетаваме професионалния поглед на занаятчиите с лоста на генеративните инструменти, за да създаваме работа, която изглежда обмислена, а не автоматизирана.</span>
-        </p>
-        <p>
-          <span lang="en">Every engagement is end-to-end: we own the strategy, the visuals, and the systems that scale them. The result is a single creative pipeline — not five vendors and a handover.</span>
-          <span lang="bg">Всеки проект е цялостен: ние водим стратегията, визиите и системите, които ги мащабират. Резултатът е един креативен процес — а не пет различни доставчика и предаване.</span>
-        </p>
-        <a class="link-arrow" href="about.html" style="margin-top:28px">
-          <span lang="en">Read the full story</span><span lang="bg">Прочети цялата история</span>
-          <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="stats reveal-stagger">
-      <div class="stat">
-        <div class="num" data-target="42"><span class="counter">0</span><span class="suffix">+</span></div>
-        <div class="label"><span lang="en">Projects shipped</span><span lang="bg">Реализирани проекта</span></div>
-      </div>
-      <div class="stat">
-        <div class="num" data-target="14"><span class="counter">0</span><span class="suffix">×</span></div>
-        <div class="label"><span lang="en">Faster delivery cycles</span><span lang="bg">Пъти по-бързи цикли</span></div>
-      </div>
-      <div class="stat">
-        <div class="num" data-target="9"><span class="counter">0</span><span class="suffix">yrs</span></div>
-        <div class="label"><span lang="en">Combined craft</span><span lang="bg">Години опит</span></div>
-      </div>
+      <span>Premium Visual Identity<span class="sep">◆</span>Product Showcase<span class="sep">◆</span>Knowledge Base Video<span class="sep">◆</span>Business Brain AI<span class="sep">◆</span>Content Generator<span class="sep">◆</span></span>
+      <span>Premium Visual Identity<span class="sep">◆</span>Product Showcase<span class="sep">◆</span>Knowledge Base Video<span class="sep">◆</span>Business Brain AI<span class="sep">◆</span>Content Generator<span class="sep">◆</span></span>
     </div>
   </div>
 </section>
@@ -867,166 +669,153 @@ html.theme-light .theme-toggle .ico-sun{display:block}
   <div class="wrap">
     <div class="section-head">
       <div class="reveal">
-        <span class="eyebrow"><span lang="en">02 — Services</span><span lang="bg">02 — Услуги</span></span>
+        <span class="eyebrow"><span lang="en">01 — Services</span><span lang="bg">01 — Услуги</span></span>
         <h2 style="margin-top:18px">
-          <span lang="en">Three disciplines, one creative pipeline.</span>
-          <span lang="bg">Три дисциплини, един креативен процес.</span>
-        </h2>
-      </div>
-      <p class="lede reveal">
-        <span lang="en">From the first render to the automation that ships it weekly. We integrate where most studios hand off.</span>
-        <span lang="bg">От първия рендер до автоматизацията, която го публикува всяка седмица. Интегрираме там, където други студия предават проекта.</span>
-      </p>
-    </div>
-
-    <div class="services">
-      <article class="card reveal">
-        <span class="num">01</span>
-        <div class="icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="m3 7 9 5 9-5"/><path d="M12 12v10"/></svg>
-        </div>
-        <h3><span lang="en">3D Visualization &amp; Design</span><span lang="bg">3D Визуализация и Дизайн</span></h3>
-        <p>
-          <span lang="en">Photoreal product, environment, and brand renders crafted in Blender and finished in Photoshop. Built for hero campaigns, e-commerce, and pitch decks that have to land.</span>
-          <span lang="bg">Фотореалистични продуктови, средови и брандови рендъри в Blender, финализирани в Photoshop. Създадени за hero кампании, e-commerce и питч презентации, които трябва да впечатлят.</span>
-        </p>
-        <div class="tags">
-          <span class="tag">Blender</span><span class="tag">Photoshop</span>
-          <span class="tag"><span lang="en">Product CGI</span><span lang="bg">Продуктово CGI</span></span>
-          <span class="tag"><span lang="en">Brand Renders</span><span lang="bg">Бранд рендъри</span></span>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <span class="num">02</span>
-        <div class="icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m22 7-5 4 5 4V7Z"/></svg>
-        </div>
-        <h3><span lang="en">Video &amp; AI-Generated Content</span><span lang="bg">Видео и AI Съдържание</span></h3>
-        <p>
-          <span lang="en">Cinematic motion, brand films, and generative visuals. We pair traditional craft with the latest AI video models to produce stories that feel directed — not prompted.</span>
-          <span lang="bg">Кинематографично движение, брандови филми и генеративни визии. Съчетаваме класически занаят с най-новите AI видео модели, за да създаваме истории, които изглеждат режисирани — не генерирани.</span>
-        </p>
-        <div class="tags">
-          <span class="tag"><span lang="en">Motion</span><span lang="bg">Моушън</span></span>
-          <span class="tag"><span lang="en">AI Video</span><span lang="bg">AI Видео</span></span>
-          <span class="tag"><span lang="en">Brand Films</span><span lang="bg">Брандови филми</span></span>
-          <span class="tag"><span lang="en">Storyboarding</span><span lang="bg">Сторибординг</span></span>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <span class="num">03</span>
-        <div class="icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9 1.65 1.65 0 0 0 4.27 7.18l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
-        </div>
-        <h3><span lang="en">AI Automation Systems</span><span lang="bg">AI Системи за Автоматизация</span></h3>
-        <p>
-          <span lang="en">Claude-powered agents and pipelines that take repetitive creative and marketing work off your team's plate — from briefs to publishing — and run them at scale, on brand.</span>
-          <span lang="bg">Агенти и пайплайни, задвижвани от Claude, които поемат повтарящата се креативна и маркетингова работа — от брифа до публикуването — и я изпълняват на мащаб, в стила на бранда.</span>
-        </p>
-        <div class="tags">
-          <span class="tag">Claude</span>
-          <span class="tag"><span lang="en">Workflow</span><span lang="bg">Уъркфлоу</span></span>
-          <span class="tag"><span lang="en">Marketing Ops</span><span lang="bg">Маркетинг Опс</span></span>
-          <span class="tag">API</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY US ============ -->
-<section id="why">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="reveal">
-        <span class="eyebrow"><span lang="en">03 — Why us</span><span lang="bg">03 — Защо нас</span></span>
-        <h2 style="margin-top:18px">
-          <span lang="en">A studio shaped for the next decade.</span>
-          <span lang="bg">Студио, проектирано за следващото десетилетие.</span>
+          <span lang="en">Style. Automation.<br>That's it.</span>
+          <span lang="bg">Стил. Автоматизация.<br>Само това.</span>
         </h2>
       </div>
     </div>
 
-    <div class="why">
-      <div class="why-item reveal">
-        <span class="idx">01</span>
-        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
-        <h3><span lang="en">AI-native, not AI-bolted-on</span><span lang="bg">AI в основата, не като добавка</span></h3>
-        <p>
-          <span lang="en">Generative tools live inside our pipeline from day one. That's why our turnarounds and our quality both move in the right direction.</span>
-          <span lang="bg">Генеративните инструменти са част от нашия процес от ден първи. Затова и сроковете, и качеството ни се движат в правилната посока.</span>
-        </p>
+    <!-- Brand & Style -->
+    <div class="services-group reveal">
+      <div class="group-label">
+        <strong lang="en">Brand &amp; Style</strong>
+        <strong lang="bg">Бранд и Стил</strong>
       </div>
-      <div class="why-item reveal">
-        <span class="idx">02</span>
-        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg></div>
-        <h3><span lang="en">Speed without the seams</span><span lang="bg">Скорост без компромис</span></h3>
-        <p>
-          <span lang="en">First cut in days, not weeks. The tools we build for ourselves are the same ones we ship to clients — and they're tuned for velocity.</span>
-          <span lang="bg">Първи вариант за дни, не седмици. Инструментите, които изграждаме за нас, са същите, които доставяме на клиентите — настроени за скорост.</span>
-        </p>
+      <div class="services">
+        <article class="card">
+          <span class="num">01</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Premium Visual Identity</h3>
+          <p>
+            <span lang="en">Logo, post templates, and a complete visual style. Everything your brand needs to look sharp and consistent — from logo to ad banners.</span>
+            <span lang="bg">Пълен пакет за визуално присъствие – от логото до рекламните банери за вашия продукт.</span>
+          </p>
+          <div class="tags">
+            <span class="tag">Logo</span>
+            <span class="tag"><span lang="en">Post Templates</span><span lang="bg">Шаблони</span></span>
+            <span class="tag"><span lang="en">Style Guide</span><span lang="bg">Стил</span></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m22 7-5 4 5 4V7Z"/></svg>
+          </div>
+          <h3>Product Showcase</h3>
+          <p>
+            <span lang="en">Simple videos that sell your product for you — trailers and ads built for social. Short, punchy, effective.</span>
+            <span lang="bg">Прости видеа, които продават вашия продукт вместо вас.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Trailers</span><span lang="bg">Трейлъри</span></span>
+            <span class="tag"><span lang="en">Ads</span><span lang="bg">Реклами</span></span>
+            <span class="tag"><span lang="en">Social Cuts</span><span lang="bg">Клипове</span></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">03</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Knowledge Base Video</h3>
+          <p>
+            <span lang="en">Professional video and image tutorials for your clients or staff — cutting support requests by 50%.</span>
+            <span lang="bg">Професионални ръководства за вашите клиенти или служители, които намаляват запитванията към поддръжката ви с 50%.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Tutorials</span><span lang="bg">Уроци</span></span>
+            <span class="tag"><span lang="en">Guides</span><span lang="bg">Ръководства</span></span>
+            <span class="tag"><span lang="en">Video &amp; Image</span><span lang="bg">Видео и снимки</span></span>
+          </div>
+        </article>
       </div>
-      <div class="why-item reveal">
-        <span class="idx">03</span>
-        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-        <h3><span lang="en">End-to-end delivery</span><span lang="bg">Цялостна доставка</span></h3>
-        <p>
-          <span lang="en">Strategy, design, production, and the automation that scales it. One team, one timeline, one point of accountability.</span>
-          <span lang="bg">Стратегия, дизайн, продукция и автоматизацията, която ги мащабира. Един екип, един график, една отговорност.</span>
-        </p>
+    </div>
+
+    <!-- Automation -->
+    <div class="services-group reveal" style="margin-top:52px">
+      <div class="group-label">
+        <strong lang="en">Automation</strong>
+        <strong lang="bg">Автоматизации</strong>
       </div>
-      <div class="why-item reveal">
-        <span class="idx">04</span>
-        <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-        <h3><span lang="en">Future-proof thinking</span><span lang="bg">Мислене за бъдещето</span></h3>
-        <p>
-          <span lang="en">We design systems that evolve. The work we ship today is built to absorb the next model, the next platform, the next shift — without a rebuild.</span>
-          <span lang="bg">Изграждаме системи, които се развиват. Това, което доставяме днес, е готово да поеме следващия модел, платформа или промяна — без да започваме отначало.</span>
-        </p>
+      <div class="services services-2">
+        <article class="card">
+          <span class="num">04</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9 1.65 1.65 0 0 0 4.27 7.18l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+          </div>
+          <h3>Business Brain AI</h3>
+          <p>
+            <span lang="en">Intelligent systems that automate customer service, email writing, and data management — so your team focuses on what matters.</span>
+            <span lang="bg">Интелигентни системи, които автоматизират обслужването на клиенти, писането на имейли или управлението на данни.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Customer Service</span><span lang="bg">Клиентско обслужване</span></span>
+            <span class="tag"><span lang="en">Email Auto</span><span lang="bg">Имейл</span></span>
+            <span class="tag">AI</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">05</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+          </div>
+          <h3>Content Generator</h3>
+          <p>
+            <span lang="en">A custom AI template that produces perfect on-brand content — ready for you to post, no editing required.</span>
+            <span lang="bg">Изготвяне на темплейт за перфектен AI генериран контент, готов за използване от вас.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Templates</span><span lang="bg">Шаблони</span></span>
+            <span class="tag"><span lang="en">AI Content</span><span lang="bg">AI Съдържание</span></span>
+            <span class="tag"><span lang="en">Social</span><span lang="bg">Социални мрежи</span></span>
+          </div>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PROCESS ============ -->
-<section id="process">
+<!-- ============ FIRST TIME FREE ============ -->
+<section id="free">
   <div class="wrap">
-    <div class="section-head">
+    <div class="free-inner">
       <div class="reveal">
-        <span class="eyebrow"><span lang="en">04 — Process</span><span lang="bg">04 — Процес</span></span>
-        <h2 style="margin-top:18px">
-          <span lang="en">A linear path. No loops, no surprises.</span>
-          <span lang="bg">Ясен път. Без цикли, без изненади.</span>
+        <div class="free-badge">
+          <span lang="en">★ First Time Free</span>
+          <span lang="bg">★ Първи проект безплатно</span>
+        </div>
+        <h2>
+          <span lang="en">We build your full project — for <em>free.</em></span>
+          <span lang="bg">Изграждаме целия ви проект — <em>безплатно.</em></span>
         </h2>
       </div>
-    </div>
-
-    <div class="process reveal-stagger">
-      <div class="step">
-        <div class="dot">01</div>
-        <span class="label-mono"><span lang="en">Week 1</span><span lang="bg">Седмица 1</span></span>
-        <h4><span lang="en">Discovery</span><span lang="bg">Откриване</span></h4>
-        <p><span lang="en">We map your brand, audience, and the hard problem worth solving first.</span><span lang="bg">Изучаваме бранда, аудиторията и истинския проблем, който си струва да решим първи.</span></p>
-      </div>
-      <div class="step">
-        <div class="dot">02</div>
-        <span class="label-mono"><span lang="en">Week 2</span><span lang="bg">Седмица 2</span></span>
-        <h4><span lang="en">Strategy</span><span lang="bg">Стратегия</span></h4>
-        <p><span lang="en">A creative direction and a system blueprint. Both signed off before a pixel moves.</span><span lang="bg">Креативна посока и системен план. И двете одобрени, преди да помръднем пиксел.</span></p>
-      </div>
-      <div class="step">
-        <div class="dot">03</div>
-        <span class="label-mono"><span lang="en">Weeks 3–6</span><span lang="bg">Седмици 3–6</span></span>
-        <h4><span lang="en">Production</span><span lang="bg">Продукция</span></h4>
-        <p><span lang="en">Renders, edits, and AI agents built in parallel. Weekly demos, no black boxes.</span><span lang="bg">Рендъри, монтаж и AI агенти — изграждани паралелно. Седмични демонстрации, без черни кутии.</span></p>
-      </div>
-      <div class="step">
-        <div class="dot">04</div>
-        <span class="label-mono"><span lang="en">Week 7+</span><span lang="bg">Седмица 7+</span></span>
-        <h4><span lang="en">Launch &amp; Scale</span><span lang="bg">Старт и Мащаб</span></h4>
-        <p><span lang="en">We hand over the assets and the engine that keeps producing them — long after launch.</span><span lang="bg">Предаваме материалите и системата, която продължава да ги произвежда — дълго след старта.</span></p>
+      <div class="free-right reveal">
+        <p>
+          <span lang="en">Despite our rich <a href="#work" style="color:var(--accent);border-bottom:1px solid var(--accent-soft)">portfolio</a>, we want to prove what we can do. We're looking for our first clients and will deliver a complete project for free — Design + Video + AI Automation.</span>
+          <span lang="bg">Въпреки богатото си <a href="#work" style="color:var(--accent);border-bottom:1px solid var(--accent-soft)">портфолио</a>, искаме да докажем какво можем. Търсим първите си клиенти, за които ще изработим ПЪЛЕН ПРОЕКТ БЕЗПЛАТНО — Дизайн + Видео + AI Автоматизация.</span>
+        </p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="free-condition">
+            <span lang="en">Honest feedback</span>
+            <span lang="bg">Честен фийдбек</span>
+          </div>
+          <div class="free-condition">
+            <span lang="en">A shoutout if you're satisfied 🤝</span>
+            <span lang="bg">Shoutout, ако останете доволни 🤝</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">
+          <span lang="en">Claim your free project</span>
+          <span lang="bg">Вземи безплатния проект</span>
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </div>
@@ -1037,10 +826,10 @@ html.theme-light .theme-toggle .ico-sun{display:block}
   <div class="wrap">
     <div class="section-head">
       <div class="reveal">
-        <span class="eyebrow"><span lang="en">05 — Selected work</span><span lang="bg">05 — Избрани проекти</span></span>
+        <span class="eyebrow"><span lang="en">02 — Selected work</span><span lang="bg">02 — Избрани проекти</span></span>
         <h2 style="margin-top:18px">
-          <span lang="en">A taste of what we're building.</span>
-          <span lang="bg">Поглед към това, върху което работим.</span>
+          <span lang="en">A taste of what we build.</span>
+          <span lang="bg">Поглед към това, което правим.</span>
         </h2>
       </div>
     </div>
@@ -1084,44 +873,42 @@ html.theme-light .theme-toggle .ico-sun{display:block}
                 <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
               </marker>
             </defs>
+            <style>
+              .node{fill:var(--bg-2);stroke:var(--line-2);stroke-width:1}
+              .node-accent{fill:var(--accent);stroke:none}
+              .label{font-family:var(--mono);font-size:7px;letter-spacing:0.1em;fill:var(--fg-dim);text-transform:uppercase}
+              .edge{stroke:var(--fg-mute);stroke-width:1;fill:none}
+              .edge-on{stroke:var(--accent);stroke-width:1.5;fill:none}
+            </style>
             <g style="color:var(--accent)">
               <path class="edge-on" d="M40 60 L100 60" marker-end="url(#ar)"/>
               <path class="edge-on" d="M100 60 L100 120" marker-end="url(#ar)"/>
               <path class="edge-on" d="M100 120 L160 120" marker-end="url(#ar)"/>
               <path class="edge-on" d="M100 120 L100 180" marker-end="url(#ar)"/>
             </g>
-            <g class="edge" style="color:var(--fg-mute)">
+            <g class="edge">
               <path d="M40 120 L70 120"/>
               <path d="M40 180 L70 180"/>
               <path d="M130 60 L160 60"/>
               <path d="M130 180 L160 180"/>
             </g>
-            <!-- nodes -->
             <rect class="node" x="20" y="48" width="40" height="24" rx="4"/>
             <text class="label" x="40" y="63" text-anchor="middle">INPUT</text>
-
             <circle class="node node-accent" cx="100" cy="60" r="14"/>
             <text class="label" x="100" y="63" text-anchor="middle" fill="#fff" style="font-weight:600">AI</text>
-
             <rect class="node" x="80" y="108" width="40" height="24" rx="4"/>
             <text class="label" x="100" y="123" text-anchor="middle">RULES</text>
-
-            <rect class="node" x="160" y="48" width="36" height="24" rx="4" fill="var(--bg-2)"/>
+            <rect class="node" x="160" y="48" width="36" height="24" rx="4"/>
             <text class="label" x="178" y="63" text-anchor="middle">CRM</text>
-
-            <rect class="node" x="160" y="108" width="36" height="24" rx="4" fill="var(--bg-2)"/>
+            <rect class="node" x="160" y="108" width="36" height="24" rx="4"/>
             <text class="label" x="178" y="123" text-anchor="middle">CMS</text>
-
             <rect class="node" x="80" y="168" width="40" height="24" rx="4"/>
             <text class="label" x="100" y="183" text-anchor="middle">SHIP</text>
-
-            <rect class="node" x="20" y="108" width="40" height="24" rx="4" fill="var(--bg-2)"/>
+            <rect class="node" x="20" y="108" width="40" height="24" rx="4"/>
             <text class="label" x="40" y="123" text-anchor="middle">DATA</text>
-
-            <rect class="node" x="20" y="168" width="40" height="24" rx="4" fill="var(--bg-2)"/>
+            <rect class="node" x="20" y="168" width="40" height="24" rx="4"/>
             <text class="label" x="40" y="183" text-anchor="middle">LOG</text>
-
-            <rect class="node" x="160" y="168" width="36" height="24" rx="4" fill="var(--bg-2)"/>
+            <rect class="node" x="160" y="168" width="36" height="24" rx="4"/>
             <text class="label" x="178" y="183" text-anchor="middle">API</text>
           </svg>
         </div>
@@ -1155,7 +942,7 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 
       <!-- F · Signal Loop -->
       <a class="proj" href="contact.html" aria-label="Signal Loop">
-        <span class="badge">AI · CLAUDE</span>
+        <span class="badge">AI · AUTOMATION</span>
         <div class="visual v-signal">
           <div class="head">
             <span class="dt"></span><span class="dt"></span><span class="dt"></span>
@@ -1175,43 +962,9 @@ html.theme-light .theme-toggle .ico-sun{display:block}
     </div>
 
     <p class="proj-note">
-      <span lang="en">Full case studies in the works — drop a note and we'll send a private deck.</span>
+      <span lang="en">Full case studies coming — drop a note and we'll send a private deck.</span>
       <span lang="bg">Подробните кейс стъдита са в подготовка — пишете ни и ще получите частна презентация.</span>
     </p>
-  </div>
-</section>
-
-<!-- ============ CONTACT (teaser) ============ -->
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow"><span lang="en">06 — Contact</span><span lang="bg">06 — Контакт</span></span>
-    </div>
-    <div class="cta-card reveal">
-      <h2>
-        <span lang="en">Have something <em>ambitious</em> in mind? Let's build it.</span>
-        <span lang="bg">Имаш нещо <em>амбициозно</em> наум? Да го изградим.</span>
-      </h2>
-      <div class="right">
-        <p>
-          <span lang="en">Tell us about the project, the deadline, and what 'great' looks like for you. We respond within one business day.</span>
-          <span lang="bg">Разкажи ни за проекта, срока и какво означава „страхотно" за теб. Отговаряме в рамките на един работен ден.</span>
-        </p>
-        <div class="ctas">
-          <a class="btn btn-primary" href="contact.html">
-            <span lang="en">Start a project</span><span lang="bg">Започни проект</span>
-            <span class="arrow">→</span>
-          </a>
-          <a class="btn btn-ghost" href="mailto:hello@creativefuturelabs.com">
-            <span lang="en">Or email us</span><span lang="bg">Или ни пиши</span>
-          </a>
-        </div>
-        <div class="meta-line">
-          <span><a href="mailto:hello@creativefuturelabs.com">hello@creativefuturelabs.com</a></span>
-          <span><span lang="en">Sofia · Remote worldwide</span><span lang="bg">София · Дистанционно по цял свят</span></span>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1219,31 +972,31 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 <footer>
   <div class="foot-strip" aria-hidden="true">
     <div class="marquee-track">
-      <span>Visuals<span class="sep">/</span>Innovation<span class="sep">/</span>AI Automation<span class="sep">/</span>Visuals<span class="sep">/</span>Innovation<span class="sep">/</span>AI Automation<span class="sep">/</span>Visuals<span class="sep">/</span>Innovation<span class="sep">/</span>AI Automation<span class="sep">/</span></span>
-      <span>Visuals<span class="sep">/</span>Innovation<span class="sep">/</span>AI Automation<span class="sep">/</span>Visuals<span class="sep">/</span>Innovation<span class="sep">/</span>AI Automation<span class="sep">/</span>Visuals<span class="sep">/</span>Innovation<span class="sep">/</span>AI Automation<span class="sep">/</span></span>
+      <span>Brand Design<span class="sep">/</span>AI Automation<span class="sep">/</span>Product Video<span class="sep">/</span>Brand Design<span class="sep">/</span>AI Automation<span class="sep">/</span>Product Video<span class="sep">/</span>Brand Design<span class="sep">/</span>AI Automation<span class="sep">/</span>Product Video<span class="sep">/</span></span>
+      <span>Brand Design<span class="sep">/</span>AI Automation<span class="sep">/</span>Product Video<span class="sep">/</span>Brand Design<span class="sep">/</span>AI Automation<span class="sep">/</span>Product Video<span class="sep">/</span>Brand Design<span class="sep">/</span>AI Automation<span class="sep">/</span>Product Video<span class="sep">/</span></span>
     </div>
   </div>
   <div class="wrap foot-main">
     <div>
       <a href="#top" class="logo"><img src="assets/logo-dark.png" alt="Creative Future Labs"/></a>
       <p style="margin-top:18px;max-width:32ch;font-size:14px">
-        <span lang="en">Hybrid creative studio. Human craft, machine speed.</span>
-        <span lang="bg">Хибридно креативно студио. Човешки занаят, машинна скорост.</span>
+        <span lang="en">We design your brand. We automate your business.</span>
+        <span lang="bg">Проектираме вашия бранд. Автоматизираме вашия бизнес.</span>
       </p>
     </div>
     <div>
       <h4><span lang="en">Studio</span><span lang="bg">Студио</span></h4>
       <ul>
-        <li><a href="about.html"><span lang="en">About</span><span lang="bg">За нас</span></a></li>
-        <li><a href="#process"><span lang="en">Process</span><span lang="bg">Процес</span></a></li>
-        <li><a href="#work"><span lang="en">Selected work</span><span lang="bg">Проекти</span></a></li>
+        <li><a href="#services"><span lang="en">Services</span><span lang="bg">Услуги</span></a></li>
+        <li><a href="#free"><span lang="en">Free project</span><span lang="bg">Безплатен проект</span></a></li>
+        <li><a href="#work"><span lang="en">Work</span><span lang="bg">Проекти</span></a></li>
       </ul>
     </div>
     <div>
       <h4><span lang="en">Services</span><span lang="bg">Услуги</span></h4>
       <ul>
-        <li><a href="#services"><span lang="en">3D &amp; Design</span><span lang="bg">3D и Дизайн</span></a></li>
-        <li><a href="#services"><span lang="en">Video &amp; AI Content</span><span lang="bg">Видео и AI Съдържание</span></a></li>
+        <li><a href="#services"><span lang="en">Visual Identity</span><span lang="bg">Визуална идентичност</span></a></li>
+        <li><a href="#services"><span lang="en">Product Showcase</span><span lang="bg">Продуктово видео</span></a></li>
         <li><a href="#services"><span lang="en">AI Automation</span><span lang="bg">AI Автоматизация</span></a></li>
       </ul>
     </div>
@@ -1252,7 +1005,6 @@ html.theme-light .theme-toggle .ico-sun{display:block}
       <ul>
         <li><a href="mailto:hello@creativefuturelabs.com">hello@creativefuturelabs.com</a></li>
         <li><a href="contact.html"><span lang="en">Start a project</span><span lang="bg">Започни проект</span></a></li>
-        <li><a href="contact.html">LinkedIn</a></li>
       </ul>
     </div>
   </div>
@@ -1341,7 +1093,6 @@ html.theme-light .theme-toggle .ico-sun{display:block}
     });
   }, {threshold: 0.01});
   els.forEach(el => io.observe(el));
-  // Fallback: reveal anything already in viewport on load
   requestAnimationFrame(() => {
     const vh = window.innerHeight;
     els.forEach(el => {
@@ -1351,56 +1102,6 @@ html.theme-light .theme-toggle .ico-sun{display:block}
         io.unobserve(el);
       }
     });
-  });
-})();
-
-/* ---------- Stat counters ---------- */
-(function(){
-  const counters = document.querySelectorAll('.num[data-target]');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      const target = parseInt(el.dataset.target, 10);
-      const span = el.querySelector('.counter');
-      const start = performance.now();
-      const dur = 1400;
-      function tick(now){
-        const t = Math.min(1, (now - start)/dur);
-        const eased = 1 - Math.pow(1 - t, 3);
-        span.textContent = Math.round(eased * target).toString();
-        if (t < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-      io.unobserve(el);
-    });
-  }, {threshold: 0.4});
-  counters.forEach(c => io.observe(c));
-})();
-
-/* ---------- Form ---------- */
-(function(){
-  const form = document.getElementById('contactForm');
-  const ok = document.getElementById('formOk');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const name = form.querySelector('#f-name').value.trim();
-    const email = form.querySelector('#f-email').value.trim();
-    const msg = form.querySelector('#f-msg').value.trim();
-    if (!name || !email || !msg || !/.+@.+\..+/.test(email)) {
-      ok.classList.remove('on');
-      form.querySelectorAll('input,textarea').forEach(i => {
-        if (!i.value.trim()) i.style.borderBottomColor = '#ff6b6b';
-      });
-      return;
-    }
-    ok.classList.add('on');
-    form.reset();
-    setTimeout(() => ok.classList.remove('on'), 6000);
-  });
-  form.querySelectorAll('input,textarea').forEach(i => {
-    i.addEventListener('input', () => i.style.borderBottomColor = '');
   });
 })();
 </script>

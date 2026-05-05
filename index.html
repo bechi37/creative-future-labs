@@ -344,6 +344,7 @@ html.theme-light .btn-primary:hover{filter:none;background:#000}
 .group-label::before{content:"";width:32px;height:1px;background:var(--line-2)}
 .group-label strong{color:var(--fg-dim)}
 .services-2{grid-template-columns:1fr 1fr}
+.services-3{grid-template-columns:repeat(3,1fr)}
 
 /* ---------- First Time Free ---------- */
 .free-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,100px);align-items:center}
@@ -565,6 +566,7 @@ html.theme-light .theme-toggle .ico-sun{display:block}
   .burger{display:flex}
   .services{grid-template-columns:1fr 1fr}
   .services-2{grid-template-columns:1fr 1fr}
+  .services-3{grid-template-columns:1fr 1fr}
   .portfolio{grid-template-columns:1fr 1fr}
   .free-inner{grid-template-columns:1fr}
   .foot-main{grid-template-columns:1fr 1fr}
@@ -572,6 +574,7 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 @media (max-width:640px){
   .services{grid-template-columns:1fr}
   .services-2{grid-template-columns:1fr}
+  .services-3{grid-template-columns:1fr}
   .portfolio{grid-template-columns:1fr}
   .foot-main{grid-template-columns:1fr}
   .hero{padding-top:100px}
@@ -733,7 +736,7 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 
     <!-- Automation -->
     <div class="services-group reveal" style="margin-top:52px">
-      <div class="services services-2">
+      <div class="services services-3">
         <article class="card">
           <span class="num">04</span>
           <div class="icon" aria-hidden="true">
@@ -765,6 +768,57 @@ html.theme-light .theme-toggle .ico-sun{display:block}
             <span class="tag"><span lang="en">Templates</span><span lang="bg">Шаблони</span></span>
             <span class="tag"><span lang="en">AI Content</span><span lang="bg">AI Съдържание</span></span>
             <span class="tag"><span lang="en">Social</span><span lang="bg">Социални мрежи</span></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">06</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          </div>
+          <h3>Lead Machine</h3>
+          <p>
+            <span lang="en">Captures leads from your website or ads, qualifies them automatically, and sends personalised follow-ups — so no prospect slips through the cracks.</span>
+            <span lang="bg">Улавя потенциалните клиенти от сайта или рекламите ви, квалифицира ги автоматично и изпраща персонализирани follow-up съобщения.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Lead Capture</span><span lang="bg">Лийдове</span></span>
+            <span class="tag"><span lang="en">Follow-Up</span><span lang="bg">Проследяване</span></span>
+            <span class="tag"><span lang="en">Qualify</span><span lang="bg">Квалификация</span></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">07</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          </div>
+          <h3>Invoice Collector</h3>
+          <p>
+            <span lang="en">Automatically generates invoices, chases unpaid ones with polite reminders, and logs everything — so you get paid faster without the awkward follow-ups.</span>
+            <span lang="bg">Автоматично генерира фактури, проследява неплатените с учтиви напомняния и записва всичко — за по-бързо плащане без неловки разговори.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Invoicing</span><span lang="bg">Фактури</span></span>
+            <span class="tag"><span lang="en">Reminders</span><span lang="bg">Напомняния</span></span>
+            <span class="tag"><span lang="en">Payments</span><span lang="bg">Плащания</span></span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">08</span>
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </div>
+          <h3>Growth Loop</h3>
+          <p>
+            <span lang="en">Turns happy clients into referrals. Automatically collects testimonials after project completion, triggers upsell offers at the right moment, and keeps your pipeline full.</span>
+            <span lang="bg">Превръща доволните клиенти в препоръки. Автоматично събира препоръки след завършен проект и задейства оферти за допълнителни услуги в правилния момент.</span>
+          </p>
+          <div class="tags">
+            <span class="tag"><span lang="en">Referrals</span><span lang="bg">Препоръки</span></span>
+            <span class="tag"><span lang="en">Testimonials</span><span lang="bg">Отзиви</span></span>
+            <span class="tag"><span lang="en">Upsells</span><span lang="bg">Допълнителни услуги</span></span>
           </div>
         </article>
       </div>
@@ -949,10 +1003,6 @@ html.theme-light .theme-toggle .ico-sun{display:block}
 
     </div>
 
-    <p class="proj-note">
-      <span lang="en">Full case studies coming — drop a note and we'll send a private deck.</span>
-      <span lang="bg">Подробните кейс стъдита са в подготовка — пишете ни и ще получите частна презентация.</span>
-    </p>
   </div>
 </section>
 
